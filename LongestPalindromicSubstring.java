@@ -1,14 +1,4 @@
 class Solution {
-    // Function to expand around the center and find the longest palindromic
-    // substring
-    private static String expandAroundCenter(String str, int left, int right) {
-        while (left >= 0 && right < str.length() && str.charAt(left) == str.charAt(right)) {
-            left--;
-            right++;
-        }
-        // Return the palindromic substring
-        return str.substring(left + 1, right);
-    }
 
     // Function to find the longest palindromic substring in the given string
     public static String longestPalindrome(String str) {
@@ -37,4 +27,17 @@ class Solution {
         // Return the longest palindromic substring
         return longestPalindrome;
     }
+    // Function to expand around the center and find the longest palindromic
+    // substring
+    private static String expandAroundCenter(String str, int left, int right) {
+        while (left >= 0 && right < str.length() && str.charAt(left) == str.charAt(right)) {
+            left--;
+            right++;
+        }
+        // Return the palindromic substring
+        return str.substring(left + 1, right);
+    }
 }
+//babad 
+0 0  aba 
+0 1
